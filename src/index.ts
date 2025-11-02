@@ -19,12 +19,16 @@ import { userRouter as userRoutes } from "./routes/user.routes";
 app.use("/api/users", userRoutes);
 
 import { postRouter as postRoutes } from "./routes/post.routes";
+import { errorHandler } from "./middlewares/errorHandler";
 app.use("/api/posts", postRoutes);
 
 // fallback
 app.use((_req: Request, res: Response) => {
   return res.status(404).json({ success: false, message: "Route not found" });
 });
+
+// Global Error Handler
+app.use(errorHandler);
 
 // Server
 const PORT = process.env.PORT || 3000;
