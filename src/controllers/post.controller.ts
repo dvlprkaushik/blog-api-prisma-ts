@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { prisma } from "../config/prisma.config";
-import { sendResponse } from "../utils/response.util";
+import { prisma } from "../config/prisma.config.js";
+import { sendResponse } from "../utils/response.util.js";
 
 /**
  * @desc   Get all posts

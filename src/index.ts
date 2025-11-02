@@ -15,11 +15,11 @@ app.get("/", async (_req: Request, res: Response) => {
 });
 
 // Routes
-import { userRouter as userRoutes } from "./routes/user.routes";
+import { userRouter as userRoutes } from "./routes/user.routes.js";
 app.use("/api/users", userRoutes);
 
-import { postRouter as postRoutes } from "./routes/post.routes";
-import { errorHandler } from "./middlewares/errorHandler";
+import { postRouter as postRoutes } from "./routes/post.routes.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 app.use("/api/posts", postRoutes);
 
 // fallback

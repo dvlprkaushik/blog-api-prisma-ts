@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { Prisma } from "@prisma/client";
-import { sendResponse } from "../utils/response.util";
+import { sendResponse } from "../utils/response.util.js";
 
 export const errorHandler = (
   err: unknown,
