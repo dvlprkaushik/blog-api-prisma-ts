@@ -14,6 +14,12 @@ app.get("/", async (_req: Request, res: Response) => {
   res.status(200).json({ message: "Blog API is running 🚀" });
 });
 
+
+// Routes
+import { userRouter as userRoutes } from "./routes/user.routes";
+app.use("/api/users",userRoutes);
+
+
 // Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
