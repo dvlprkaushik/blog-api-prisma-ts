@@ -4,14 +4,22 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "migrate": "prisma migrate dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dvlprkaushik/blog-api-prisma-ts.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "REST",
+    "API",
+    "TS",
+    "PRISMA"
+  ],
+  "author": "kaushik",
   "license": "ISC",
   "type": "module",
   "bugs": {
