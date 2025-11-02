@@ -19,6 +19,8 @@ app.get("/", async (_req: Request, res: Response) => {
 import { userRouter as userRoutes } from "./routes/user.routes";
 app.use("/api/users",userRoutes);
 
+import { postRouter as postRoutes } from "./routes/post.routes";
+app.use("/api/posts",postRoutes);
 
 // Server
 const PORT = process.env.PORT || 3000;
